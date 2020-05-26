@@ -54,7 +54,7 @@ namespace laboratorio_07
         private void button11_Click(object sender, EventArgs e)
         {
             
-            textBox1.Text = textBox1.Text + ".";
+            textBox1.Text = textBox1.Text + ",";
         }
 
         private void button12_Click(object sender, EventArgs e)
@@ -68,6 +68,7 @@ namespace laboratorio_07
             
             operationPerformed = button14.Text;
             valor = Double.Parse(textBox1.Text);
+            textBox1.Text = valor.ToString();
             textBox1.Text = textBox1.Text + "+";
             este = textBox1.Text.Count();
             
@@ -95,12 +96,13 @@ namespace laboratorio_07
 
         private void button18_Click(object sender, EventArgs e)
         {
-            este = textBox1.Text.Count();
+            
             operationPerformed = button18.Text;
             valor = Double.Parse(textBox1.Text);
             textBox1.Text = textBox1.Text + "-";
-            
-            
+            este = textBox1.Text.Count();
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -179,7 +181,7 @@ namespace laboratorio_07
             {
 
                 case "+":
-                    textBox1.Text = (valor + valor2).ToString()+"estoy sumando";
+                    textBox1.Text = (valor + valor2).ToString();
                     break;
                 case "-":
                     textBox1.Text = (valor - valor2).ToString();
@@ -188,7 +190,16 @@ namespace laboratorio_07
                     textBox1.Text = (valor * valor2).ToString();
                     break;
                 case "÷":
-                    textBox1.Text = (valor / valor2).ToString();
+                    if(valor2==0)
+                    {
+                        textBox1.Text="Syntax error";
+                    }
+                    else
+                    {
+                     textBox1.Text = (valor / valor2).ToString();
+
+                    }
+                    
                     break;
                 default:
                     break;
