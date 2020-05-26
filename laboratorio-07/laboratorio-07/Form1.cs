@@ -218,12 +218,15 @@ namespace laboratorio_07
 
                 case "+":
                     textBox1.Text = (valor + valor2).ToString();
+                    pie = (valor + valor2).ToString();
                     break;
                 case "-":
                     textBox1.Text = (valor - valor2).ToString();
+                    pie = (valor - valor2).ToString();
                     break;
                 case "X":
                     textBox1.Text = (valor * valor2).ToString();
+                    pie = (valor * valor2).ToString();
                     break;
                 case "÷":
                     if(valor2==0)
@@ -233,6 +236,7 @@ namespace laboratorio_07
                     else
                     {
                      textBox1.Text = (valor / valor2).ToString();
+                     pie = (valor / valor2).ToString();
 
                     }
                     
@@ -240,6 +244,11 @@ namespace laboratorio_07
                 default:
                     break;
             }
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = pie;
         }
     }
 }
