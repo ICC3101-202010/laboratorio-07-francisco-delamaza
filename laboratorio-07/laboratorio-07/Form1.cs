@@ -67,10 +67,19 @@ namespace laboratorio_07
             
             
             operationPerformed = button14.Text;
-            valor = Double.Parse(textBox1.Text);
-            textBox1.Text = valor.ToString();
-            textBox1.Text = textBox1.Text + "+";
-            este = textBox1.Text.Count();
+            try
+            {
+                valor = Double.Parse(textBox1.Text);
+                textBox1.Text = textBox1.Text + "+";
+                este = textBox1.Text.Count();
+            }
+            catch(Exception)
+            {
+                textBox1.Text = "Syntax error";
+                
+            }
+
+            
             
         }
 
@@ -78,9 +87,18 @@ namespace laboratorio_07
         {
             
             operationPerformed = button15.Text;
-            valor = Double.Parse(textBox1.Text);
-            textBox1.Text = textBox1.Text + "x";
-            este = textBox1.Text.Count();
+            try
+            {
+                valor = Double.Parse(textBox1.Text);
+                textBox1.Text = textBox1.Text + "x";
+                este = textBox1.Text.Count();
+            }
+            catch (Exception)
+            {
+                textBox1.Text = "Syntax error";
+
+            }
+          
 
 
         }
@@ -89,18 +107,36 @@ namespace laboratorio_07
         {
             
             operationPerformed = button17.Text;
-            valor = Double.Parse(textBox1.Text);
-            textBox1.Text = textBox1.Text + "÷";
-            este = textBox1.Text.Count();
+            try
+            {
+                valor = Double.Parse(textBox1.Text);
+                textBox1.Text = textBox1.Text + "÷";
+                este = textBox1.Text.Count();
+            }
+            catch (Exception)
+            {
+                textBox1.Text = "Syntax error";
+
+            }
+           
         }
 
         private void button18_Click(object sender, EventArgs e)
         {
             
             operationPerformed = button18.Text;
-            valor = Double.Parse(textBox1.Text);
-            textBox1.Text = textBox1.Text + "-";
-            este = textBox1.Text.Count();
+            try
+            {
+                valor = Double.Parse(textBox1.Text);
+                textBox1.Text = textBox1.Text + "-";
+                este = textBox1.Text.Count();
+            }
+            catch (Exception)
+            {
+                textBox1.Text = "Syntax error";
+
+            }
+            
 
 
         }
